@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View} from 'react-native';
+import {View, SafeAreaView} from 'react-native';
 import {
   interpolate,
   useAnimatedStyle,
@@ -46,7 +46,7 @@ const PayBuy = (): JSX.Element => {
   });
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {!visible ? (
         <CreditCard
           nameCard="THIAGO L S SILVA"
@@ -59,7 +59,7 @@ const PayBuy = (): JSX.Element => {
       )}
 
       <Button onPress={handleCreditCard} />
-    </View>
+    </SafeAreaView>
   );
 };
 
